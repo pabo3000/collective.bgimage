@@ -10,7 +10,7 @@ by Jan Schneiders).
 Installing
 ==========
 
-This package requires Plone 4.0 or later (tested on 4.1.2).
+This package requires Plone 4.0 or later (tested on 4.1).
 
 Installing without buildout
 ---------------------------
