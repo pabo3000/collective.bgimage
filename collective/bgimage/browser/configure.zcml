@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.bgimage">
+
+    <browser:viewlet
+      name="collective.bgimage"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      class=".viewlets.BGImageViewlet"
+      template="bgimage.pt"
+      for="*"
+      layer="collective.bgimage.interfaces.IBGImageInstalled"
+      permission="zope2.View"
+      />
+
+    <browser:resource 
+       name="collective.bgimage.jquery.fullscreenr.js" 
+       file="jquery.fullscreenr.js" 
+       />
+
+    <browser:resource 
+       name="collective.bgimage.bgimage.css" 
+       file="bgimage.css" 
+       />
+
+</configure>

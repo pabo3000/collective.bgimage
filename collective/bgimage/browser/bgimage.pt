@@ -1,0 +1,7 @@
+<!-- This is the background image -->
+<p tal:replace="structure view/init_js"></p>
+<img class="active_bg_img full_bg_img" 
+     id="bgimg1" 
+     src="background image url" 
+     style="z-index:-1"
+     tal:attributes="src view/bgimageurl" />
