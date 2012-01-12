@@ -3,8 +3,8 @@ Introduction
 
 collective.bgimage is a simple Plone add-on. It adds a viewlet which displays 
 an image. The image is resized to completely fill the browser. The package is
-based on jquery.fullscreenr.js (lightweight full screen background jquery plugin)
-by Jan Schneiders.
+based on jquery.fullscreenr.js (lightweight full screen background jquery plugin
+by Jan Schneiders).
 
 
 Installing
