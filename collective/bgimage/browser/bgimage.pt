@@ -1,7 +1,17 @@
 <!-- This is the background image -->
-<p tal:replace="structure view/init_js"></p>
-<img class="active_bg_img full_bg_img" 
-     id="bgimg1" 
-     src="background image url" 
-     style="z-index:-1"
-     tal:attributes="src view/bgimageurl" />
+<tal:block condition="view/bgimageurl">
+	<p tal:replace="structure view/init_js"></p>
+	<h2>Ausgewähltes Hintergrundbild</h2>
+	<p>Dieses Bild ist der Kategorie "background" zugeordnet. Um ein andereses Bild 
+	auszuwählen, muss bei 
+	    <a href="zum Bild" 
+	       tal:attributes="href string:${view/bgimageurl}/edit">
+	        diesem Bild
+	    </a> 
+	die Kategorie gelöscht und bei einem anderen hinzugefügt werden.</p>
+	<img class="active_bg_img full_bg_img" 
+	     id="bgimg1" 
+	     src="background image url" 
+	     style="z-index:-1"
+	     tal:attributes="src view/bgimageurl" />
+</tal:block>

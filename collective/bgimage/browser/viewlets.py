@@ -1,3 +1,5 @@
+from zExceptions import Unauthorized
+
 from zope.component import getMultiAdapter
 
 from plone.memoize.view import memoize
@@ -29,8 +31,11 @@ class BGImageViewlet(base.ViewletBase):
             return context.aq_parent
 
     def getBGImageFromFolder(self, folder):
-        brains = folder.getFolderContents({'portal_type':'Image',
+        try:
+            brains = folder.getFolderContents({'portal_type':'Image',
                                            'Subject':'background',}) 
+        except Unauthorized:
+            return None
         if len(brains)>0:
             return brains[0].getObject()
         return None

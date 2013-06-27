@@ -1,22 +1,9 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration of the viewlet managers
-     for the "DmS Theme" skin.
-     -->
 
 <object>
 
-  <!-- Viewlets keep the same ordering than the default skin ('Plone Default'
-       out of the box).
-       You can specify skinname="*" if you want changes apply for all skins.
-       Using "True"" for the 'make-default' parameter will make the 'skinname'
-       value set as default skinname. Means the name of the skin that would be
-       used in case the viewlets ordering was not specified for the currently
-       used skin.
-       The 'based-on' attribute lets you inherit the viewlets ordering from an
-       existing skin.
-       -->
-  <order manager="plone.portalfooter" skinname="DmS Theme"
-         based-on="Plone Default">
+  <order manager="plone.belowcontent" skinname="Sunburst Theme"
+         based-on="Sunburst Theme">
     <!-- The definition of a viewlet accepts these parameters:
          - name: quite self explanatory, the name of the viewlet.
          - insert-before: name of the viewlet before which it must be added or
@@ -34,54 +21,5 @@
 -->
   </order>
 
-  <hidden manager="plone.portalheader" skinname="DmS Theme">
-    <viewlet name="plone.site_actions" />
-    <viewlet name="plone.personal_bar" />
-  </hidden>
 
-  <hidden manager="plone.portaltop" skinname="DmS Theme">
-    <viewlet name="plone.personal_bar" />
-  </hidden>
-  
-  <hidden manager="plone.plone.abovecontent" skinname="DmS Theme">
-    <viewlet name="plone.path_bar" />
-  </hidden>
-    
-  <hidden manager="plone.portalfooter" skinname="DmS Theme">
-    <viewlet name="plone.site_actions" />
-	<viewlet name="plone.colophon" />
-  </hidden>
-  
-  <order manager="plone.portalheader" skinname="DmS Theme"
-         based-on="Plone Default">
-    <viewlet name="dms.toprolloviewlet"
-             insert-after="plone.skip_links" />
-    <viewlet name="dms.my_actions"
-             insert-after="dms.toprolloviewlet" />
-    <viewlet name="plone.searchbox"
-             insert-after="plone.logo" />
-  </order>
-  
-  <order manager="plone.portalfooter" skinname="DmS Theme">
-     <viewlet name="plone.footer"/>
-     <viewlet name="dms.site_actions"/>
-     <viewlet name="plone.colophon"/>
-     <viewlet name="plone.analytics"/>
-     <viewlet name="dms.partners"
-              insert-before="*" />
-  </order>
- 
-  <order manager="plone.abovecontent" skinname="DmS Theme"
-         based-on="Plone Default">
-    <viewlet name="dms.eyecatcher"
-             insert-before="*" />
-  </order>
-
-  <order manager="plone.portaltop" skinname="DmS Theme"
-         based-on="Plone Default">
-    <viewlet name="dms.navi"
-             insert-after="plone.personal_bar" />
-    <viewlet name="plone.path_bar"
-             insert-after="*" />
-  </order>
 </object>
